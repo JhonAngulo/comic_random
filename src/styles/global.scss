@@ -1,7 +1,27 @@
-$color-primary: #c6538c;
-$color: rgba(black, 0.88);
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import "./variables";
+@import "./mixin";
+@import "./components/cardcomic";
+@import "./components/score";
+@import "./components/footer";
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body, #app {
+  width: 100vw;
+  height: 100vh;
+  font-family: 'Roboto', sans-serif;
+}
+
+#app {
+  display: grid;
+  grid-template-rows: 1fr 40px;
+}
 
 body {
-  background-color: $color-primary;
-  color: $color;
+  background-image: linear-gradient(to right top, #05323f, #05546a, #067798, #0d9dca, #1dc4ff);
 }

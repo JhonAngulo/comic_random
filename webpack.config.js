@@ -15,7 +15,8 @@ const config = {
   resolve: {
     extensions: ['.js', '.jsx'],
     alias: {
-      '@componets': path.resolve(__dirname, 'src/componets/')
+      '@components': path.resolve(__dirname, 'src/components/'),
+      '@containers': path.resolve(__dirname, 'src/containers/')
     }
   },
   module: {
@@ -55,7 +56,13 @@ const config = {
   devServer: {
     contentBase: path.join(__dirname, 'dist'),
     compress: true,
-    port: 3000
+    port: 3000,
+    proxy: {
+      '/': {
+        target: 'https://xkcd.com/info.0.json',
+        secure: false
+      }
+    }
   }
 }
 
@@ -79,8 +86,6 @@ module.exports = (env, argv) => {
       ]
     }
   }
-
-  console.log(config)
 
   return config
 }
