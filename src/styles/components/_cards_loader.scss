@@ -14,7 +14,8 @@
     }
   }
 
-  &-item{
+  &-item {
+    display: grid;
     padding: 20px;
   }
 }

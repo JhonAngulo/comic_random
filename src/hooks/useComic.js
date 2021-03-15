@@ -1,12 +1,13 @@
 import { useState, useEffect } from 'react'
 
 const getRequestByProxy = (url) => {
-  const proxyUrl = 'https://cors-anywhere.herokuapp.com'
+  // const proxyUrl = 'https://cors-anywhere.herokuapp.com'
+  const proxyUrl = 'https://thingproxy.freeboard.io/fetch'
 
   return new Promise((resolve, reject) => {
     fetch(`${proxyUrl}/${url}`, {
       headers: {
-        'X-Requested-With': 'https://xkcd.com/2',
+        'X-Requested-With': 'https://xkcd.com',
         Host: 'xkcd.com'
       }
     })
@@ -14,6 +15,7 @@ const getRequestByProxy = (url) => {
         if (resp.status === 200) {
           return resp.json()
         } else {
+          console.log(resp.json())
           return resp.text()
         }
       })
@@ -30,7 +32,6 @@ const useGetComic = () => {
 
   useEffect(async () => {
     const request = await getRequestByProxy(`${urlBase}/${urlComplement}`)
-    console.log(request)
     if (typeof request === 'object') {
       const random = (Math.random() * (request.num - 1) + 1).toFixed(0)
       const data = await getRequestByProxy(`${urlBase}/${random}/${urlComplement}`)

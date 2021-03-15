@@ -18,6 +18,8 @@ const ComicContainer = () => {
     }
   }, [comic, error])
 
+  // console.log(comic)
+
   if (error) {
     return <Error title='Oops!' text={error}/>
   }

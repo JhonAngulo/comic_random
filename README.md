@@ -36,3 +36,5 @@ Agrupa correctamente React en el modo de producción y optimiza la compilación 
 
 > https://cors-anywhere.herokuapp.com/
 
+> https://github.com/Freeboard/thingproxy
+
