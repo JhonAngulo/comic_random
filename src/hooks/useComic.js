@@ -1,14 +1,15 @@
 import { useState, useEffect } from 'react'
 
 const getRequestByProxy = (url) => {
-  // const proxyUrl = 'https://cors-anywhere.herokuapp.com'
-  const proxyUrl = 'https://thingproxy.freeboard.io/fetch'
+  const proxyUrl = 'https://cors-anywhere.herokuapp.com'
+  // const proxyUrl = 'https://thingproxy.freeboard.io/fetch'
 
   return new Promise((resolve, reject) => {
     fetch(`${proxyUrl}/${url}`, {
       headers: {
+        accept: 'Accept: application/json',
         'X-Requested-With': 'https://xkcd.com',
-        Host: 'https://randomcomic.netlify.app',
+        Host: 'xkcd.com',
         'Access-Control-Allow-Origin': '*'
       }
     })
