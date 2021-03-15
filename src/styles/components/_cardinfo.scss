@@ -1,6 +1,7 @@
 .cardinfo {
   overflow-y: auto;
-  width: 400px;
+  min-width: 360px;
+  max-width: 500px;
   margin: 0 auto;
   min-height: 300px;
   max-height: 480px;

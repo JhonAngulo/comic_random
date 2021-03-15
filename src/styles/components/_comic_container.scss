@@ -17,6 +17,7 @@
 
     @include lg {
       display: initial;
+      overflow-x: hidden;
     }
   }
 }

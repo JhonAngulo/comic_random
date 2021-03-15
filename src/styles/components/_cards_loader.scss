@@ -8,6 +8,10 @@
   &--items {
     display: grid;
     grid-template-columns: 1fr 1fr;
+
+    @include lg {
+      display: initial;
+    }
   }
 
   &-item{

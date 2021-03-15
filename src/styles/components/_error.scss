@@ -1,0 +1,26 @@
+.error {
+  text-align: center;
+  width: 50%;
+  margin: 0 auto;
+
+  &--imagen {
+    padding-top: 50px;
+    width: 56.6%;
+    height: auto;
+  }
+  
+  &--badge {
+    color: white;
+    background-color: #1dc4ff;
+    width: max-content;
+    margin: 0 auto;
+    padding: 4px 20px;
+    border-radius: 8px;
+    @include shadow;
+    margin-bottom: 20px;
+  }
+
+  &--text {
+    color: white;
+  }
+}

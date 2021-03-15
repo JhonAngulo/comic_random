@@ -2,13 +2,13 @@ import React, { useEffect, useState } from 'react'
 import CardComic from '@components/CardComic'
 import CardInfo from '@components/CardInfo'
 import CardsLoader from '@components/CardsLoader'
+import Error from '@components/Error'
 
 import useGetComit from '../hooks/useComic'
 
 const ComicContainer = () => {
   const [loadgind, setLoading] = useState(true)
   const { comic, error } = useGetComit()
-  console.log(comic)
 
   useEffect(() => {
     if (Object.keys(comic).length) {
@@ -19,7 +19,7 @@ const ComicContainer = () => {
   }, [comic, error])
 
   if (error) {
-    return 'error'
+    return <Error title='Oops!' text={error}/>
   }
 
   if (loadgind) {
