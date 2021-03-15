@@ -8,7 +8,8 @@ const getRequestByProxy = (url) => {
     fetch(`${proxyUrl}/${url}`, {
       headers: {
         'X-Requested-With': 'https://xkcd.com',
-        Host: 'xkcd.com'
+        Host: 'https://randomcomic.netlify.app',
+        'Access-Control-Allow-Origin': '*'
       }
     })
       .then(resp => {
