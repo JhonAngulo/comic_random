@@ -1,0 +1,40 @@
+.cardinfo {
+  overflow-y: auto;
+  width: 400px;
+  margin: 0 auto;
+  min-height: 300px;
+  max-height: 480px;
+  padding: 20px 50px;
+  text-align: center;
+  background-color: rgba($color: #000000, $alpha: 0.3);
+  color: white;
+  @include animationIn;
+  @include shadow;
+
+  @include lg {
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+
+  &--title {
+    margin-top: 5px;
+    letter-spacing: 1px;
+  }
+
+
+  &--details {
+    text-align: left;
+
+    &-info {
+      margin-top: 10px;
+      margin-bottom: 10px;
+      opacity: 60%;
+      letter-spacing: 0.8px;
+    }
+
+    &-text {
+      letter-spacing: 1px;
+    }
+
+  }
+}

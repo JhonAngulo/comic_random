@@ -22,7 +22,7 @@
   }
 }
 
-@mixin animationIn($duration: 1.5s) {
+@mixin animationIn($duration: 3s) {
   animation-duration: $duration;
   animation-name: slidein;
 

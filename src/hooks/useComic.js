@@ -6,27 +6,41 @@ const getRequestByProxy = (url) => {
   return new Promise((resolve, reject) => {
     fetch(`${proxyUrl}/${url}`, {
       headers: {
-        'X-Requested-With': 'wololo'
+        'X-Requested-With': 'https://xkcd.com/2',
+        Host: 'xkcd.com'
       }
     })
-      .then(resp => resp.json())
+      .then(resp => {
+        if (resp.status === 200) {
+          return resp.json()
+        } else {
+          return resp.text()
+        }
+      })
       .then(res => resolve(res))
       .catch(error => reject(error))
   })
 }
 
 const useGetComic = () => {
-  const urlBase = 'https://xkcd.com/'
-  const urlComplement = '/info.0.json'
-  const [comit, setComit] = useState({})
+  const urlBase = 'https://xkcd.com'
+  const urlComplement = 'info.0.json'
+  const [comic, setComic] = useState({})
+  const [error, setError] = useState(false)
 
   useEffect(async () => {
-    const { num } = await getRequestByProxy(`${urlBase}${urlComplement}`)
-    const comic = await getRequestByProxy(`${urlBase}${num}${urlComplement}`)
-    setComit(comic)
+    const request = await getRequestByProxy(`${urlBase}/${urlComplement}`)
+    console.log(request)
+    if (typeof request === 'object') {
+      const random = (Math.random() * (request.num - 1) + 1).toFixed(0)
+      const data = await getRequestByProxy(`${urlBase}/${random}/${urlComplement}`)
+      setComic(data)
+    } else {
+      setError(request)
+    }
   }, [])
 
-  return comit
+  return { comic, error }
 }
 
 export default useGetComic

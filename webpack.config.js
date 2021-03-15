@@ -31,7 +31,7 @@ const config = {
       {
         test: /\.html$/,
         use: [
-          { loader: 'html-loader'}
+          { loader: 'html-loader' }
         ]
       },
       {
@@ -41,6 +41,13 @@ const config = {
           'css-loader',
           'sass-loader'
         ]
+      },
+      {
+        test: /\.ico$/,
+        loader: 'file-loader',
+        options: {
+          name: '[name].[ext]'
+        }
       }
     ]
   },
@@ -67,9 +74,8 @@ const config = {
 }
 
 module.exports = (env, argv) => {
-
   if (argv.mode === 'development') {
-    config.devtool = 'source-map';
+    config.devtool = 'source-map'
   }
 
   if (argv.mode === 'production') {

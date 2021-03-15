@@ -1,0 +1,22 @@
+.comic_container {
+  text-align: center;
+
+  &--title {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    letter-spacing: 1.2px;
+    color: white;
+  }
+
+  &--cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: stretch;
+    align-items: center;
+    justify-items: center;
+
+    @include lg {
+      display: initial;
+    }
+  }
+}

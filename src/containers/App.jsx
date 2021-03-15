@@ -1,11 +1,11 @@
 import React from 'react'
-import CardComic from '@components/CardComic'
+import ComicContainer from '@containers/ComicContainer'
 import Footer from '@components/Footer'
 
 const App = () => {
   return (
     <>
-      <CardComic/>
+      <ComicContainer />
       <Footer/>
     </>
   )

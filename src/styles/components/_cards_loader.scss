@@ -1,0 +1,16 @@
+.cards_loader {
+  text-align: center;
+
+  &-title {
+    padding: 20px;
+  }
+
+  &--items {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  &-item{
+    padding: 20px;
+  }
+}
