@@ -2,6 +2,9 @@
 
 [ir al sitio](https://randomcomic.netlify.app/)
 
+![Comic Screen](./mockup/comic_screen.png)
+
+![Error Screen](./mockup/error_screen.png)
 
 Este proyecto se cero desde cero configurando webpack con babel además de todos los plugins necesarios, para más información sobre los plugins utilizados chequear el package.json
 
