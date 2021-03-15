@@ -9,11 +9,11 @@ const CardsLoader = () => {
           <Skeleton width={200} height={30} />
           <div className='cards_loader--items'>
             <div className='cards_loader-item'>
-              <Skeleton width={400} height={300} />
-              <Skeleton width={400} height={80} />
+              <Skeleton width={360} height={300} />
+              <Skeleton width={360} height={80} />
             </div>
             <div className='cards_loader-item'>
-              <Skeleton width={400} height={380} />
+              <Skeleton width={360} height={380} />
             </div>
           </div>
         </div>
