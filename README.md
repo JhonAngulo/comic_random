@@ -31,6 +31,8 @@ Agrupa correctamente React en el modo de producción y optimiza la compilación 
 
 ### Recursos
 > https://xkcd.com/json.html
+
 > https://stephencharlesweiss.com/building-xkcd-daily-digest/
+
 > https://cors-anywhere.herokuapp.com/
 
