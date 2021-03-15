@@ -1,4 +1,7 @@
-# Prueba Tecnica Random Comic | Prueba tecnica
+# Prueba Tecnica | Random Comic
+
+[ir al sitio](https://randomcomic.netlify.app/)
+
 
 Este proyecto se cero desde cero configurando webpack con babel además de todos los plugins necesarios, para más información sobre los plugins utilizados chequear el package.json
 
@@ -6,7 +9,9 @@ Este proyecto se cero desde cero configurando webpack con babel además de todos
 
 En el proyecto estan habilitados los siguientes comandos:
 
-### `npm i`
+```bash
+npm i
+```
 
 Comando requerido para instalar las dependencias del proyecto
 
