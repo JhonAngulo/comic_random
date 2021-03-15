@@ -10,8 +10,8 @@
   }
   
   &--badge {
-    color: white;
-    background-color: #1dc4ff;
+    color:$text-primary;
+    background-color: $color-primary;
     width: max-content;
     margin: 0 auto;
     padding: 4px 20px;
@@ -21,6 +21,6 @@
   }
 
   &--text {
-    color: white;
+    color: $text-primary;
   }
 }
