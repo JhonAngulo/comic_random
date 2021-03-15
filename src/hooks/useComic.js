@@ -7,8 +7,7 @@ const getRequestByProxy = (url) => {
   return new Promise((resolve, reject) => {
     fetch(`${proxyUrl}/${url}`, {
       headers: {
-        accept: 'Accept: application/json',
-        'X-Requested-With': 'https://xkcd.com',
+        'X-Requested-With': 'wololo',
         Host: 'xkcd.com',
         'Access-Control-Allow-Origin': '*'
       }
@@ -17,7 +16,6 @@ const getRequestByProxy = (url) => {
         if (resp.status === 200) {
           return resp.json()
         } else {
-          console.log(resp.json())
           return resp.text()
         }
       })

@@ -24,7 +24,8 @@ html, body, #app {
 #app {
   display: grid;
   grid-template-rows: 1fr 40px;
-  background-image: url(/public/honeycomb.svg)
+  background-image: url(/public/honeycomb.svg);
+  overflow-x: hidden;
 }
 
 body {
