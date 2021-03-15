@@ -20,7 +20,7 @@ npm run dev
 ```
 
 Ejecuta la aplicación en modo de desarrollo. \
-Abrira [http://localhost:3000](http://localhost:3000) para verlo en el navegador.
+Deberá ingresar a [http://localhost:3000](http://localhost:3000) para verlo en el navegador.
 
 ```bash
 npm run build
